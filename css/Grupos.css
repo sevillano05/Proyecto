@@ -1,0 +1,44 @@
+/* Grupos Section*/
+*{
+    background-image: url(https://wallpapertag.com/wallpaper/full/2/c/2/268489-large-red-background-1920x1080-images.jpg);
+    background-attachment: fixed;
+    background-position-x: center;
+    background-repeat:inherit;
+    background-blend-mode: luminosity;
+}
+.Grupos{
+    width: 100%;
+    height: 75%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.Grupo{
+    text-align: center;
+    width: 20%;
+    height: auto;
+    background-color: white;
+}
+.Grupo h3{
+    background: none;
+}
+.Grupo .equipo{
+    width: 90%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    border-top: solid white;
+}
+.cuerpo .equipo:hover{
+    background-color: #415679;
+}
+.Grupo .equipo img{
+    width: 35%;
+}
+.Grupo .equipo a{
+    margin: 0px;
+    width: 75%;
+    background: none;
+}
+
