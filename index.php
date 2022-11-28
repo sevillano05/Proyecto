@@ -26,7 +26,6 @@ if (isset($_GET['page'])) {
     
     <?php //Mensaje de error
     if ($conn->connect_error) {
-
         echo '<section class="error">
                 <img src="https://cdn3.iconfinder.com/data/icons/user-interface-21/32/1026-512.png" alt="">
                 <p class="error"> Error número: '.mysqli_connect_errno().
@@ -37,9 +36,17 @@ if (isset($_GET['page'])) {
         exit();
         die("Connection failure: " . $conn->connect_error);
     } 
+    if (!file_exists('Templates/'.$page.'.php')) {
+        echo '<section class="e404">
+                <img src="https://istamps.net/wp-content/uploads/2019/09/404-1-1024x498.png" alt="">
+                <p></p>
+             </section>';
     
-    include('Templates/'.$page.'.php');?>
+        die();
+    }
+    
+    include('Templates/'.$page.'.php');
 
-<?php
+
 $conn->close();
 ?>

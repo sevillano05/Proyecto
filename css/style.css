@@ -82,6 +82,11 @@ body{
 .error img{
     width: 150px;
 }
+.e404{
+    margin-top: 5%;
+    text-align: center;
+}
+
 /* first section */
 .header{
     text-align: center;
