@@ -2,6 +2,50 @@
 Paleta de colores
 */
 
+/*Template nav_bar*/
+.menucontainer{
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+}
+.menu {
+        display: flex;
+        text-align: center;
+        padding: 0;
+        margin-right: 6vw;
+} 
+.menu li {
+        list-style: none;
+        margin-top: 8px;
+        border-color: black;
+}
+.menu li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 550;
+        padding: 20px 20px ;
+}
+.menucontainer .logo {
+        width: 5vw;
+        height: 10vh;
+        margin-left: 15px;
+        margin-top: 8px;
+}
+.sesiones {
+        margin-top: 25px;
+        margin-bottom: 27px;
+        margin-right: 20px;
+}
+strong {
+    margin-right: 11px;
+    border-radius: 10px;
+    background-color: rgba(37, 26, 26, 0.29);
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+
 /* overall */
 *{
     background-image: url(https://wallpaperaccess.com/full/983279.jpg);
@@ -41,14 +85,14 @@ body{
 /* first section */
 .header{
     text-align: center;
-    height: 25%;
+    height: 20%;
 }
 .header img{
     width: 15%;
 }
 /* Equipos Section */
 .cuerpo{
-    height: 75%;
+    height: 70%;
 }
 .equipo{
     text-align: center;

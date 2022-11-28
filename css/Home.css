@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+}
+.videofondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+.fondo{
+    position: relative;
+    width: auto;
+    height: 100vh;
+}
+.texto {
+    font-weight: 600;
+    font-size: 50px;
+     color: white;
+     align-items: center;
+     text-align: center;
+     position: absolute;
+     top: 50%;
+   left: 35% ;
+   margin: -25px 0 0 -25px;
+}
