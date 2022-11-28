@@ -1,11 +1,4 @@
-    <link rel="stylesheet" href="css/Grupos.css">
-</head>
-<body>
-    <?php include("nav_bar.php") ?>    
-    <div class="header">
-        <img src="img/WhiteCopa.png" alt="">
-        <h1 class="titulo">Mundial de fútbol Qatar 2022</h1>
-    </div>
+<?php include('Templates/header.php') ?>
     <div class="cuerpo flex">
         <?php //Querys mostrar Grupos
         $queryGrupoA = "SELECT * FROM equipos WHERE Grupos='A' order by Puntos";

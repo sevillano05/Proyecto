@@ -1,10 +1,4 @@
-<body>
-    <?php include("nav_bar.php") ?>
-    
-    <div class="header">
-        <img class="background" src="img/WhiteCopa.png" alt="">
-        <h1 class="titulo">Mundial de fútbol Qatar 2022</h1>
-    </div>
+    <?php include('Templates/header.php') ?>
     <div class="cuerpo flex">
         <?php //Mostrar Equipos
         $queryEquipos = "SELECT  * FROM equipos";
