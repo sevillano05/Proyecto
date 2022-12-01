@@ -1,0 +1,27 @@
+.container {
+    position: absolute;
+   top: 35%;
+   left: 40%;
+    border: solid 3px black;
+ background-color: rgb(21, 169, 192);
+  
+}
+input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;  
+}
+
+.form {
+    margin: 20px;
+}
+h2 {
+    text-align: center;
+    margin: 10px;
+}
+body {
+background-color: rgba(42, 173, 185, 0.544);
+}

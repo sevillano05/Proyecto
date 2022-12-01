@@ -1,5 +1,5 @@
     <div class="cuerpo flex">
-        <?php //Querys mostrar partidos
+        <?php print_r($_SESSION);//Querys mostrar partidos
         $queryTecnicos = "SELECT p.GolesP1, p.GolesP2, e.Pais, e.UrlBandera, p.Fecha, p.Estadio
                             FROM partidos p JOIN equipos e ON p.Pais2 = e.Id 
                             WHERE Pais1 = '$_SESSION[favorito]' OR Pais2='$_SESSION[favorito]' 
