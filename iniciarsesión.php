@@ -14,10 +14,11 @@ if($conexion_bd->connect_errno){
     exit();
 }
 
-$queryUsuario = "SELECT  Id, Username, Contraseña, EFavorito FROM usuarios where Username = '$usuario' and contraseña = '$contraseña'";
+$queryUsuario = "SELECT  Id, Admin_si, Username, Contraseña, EFavorito FROM usuarios where Username = '$usuario' and contraseña = '$contraseña'";
 $login = $conexion_bd->query($queryUsuario);
 $resultado = $login->fetch_all(MYSQLI_ASSOC);
-if ($usuario == $resultado[0]["Username"] || $contraseña == $login[0]["contraseña"]) {
+if ($resultado[0]["Admin_si"] == 0) {
+    if ($usuario == $resultado[0]["Username"] || $contraseña == $login[0]["contraseña"]) {
 
     $_SESSION["Id"] = $resultado[0]["Id"];
     $_SESSION["usuario"] = $usuario;
@@ -25,8 +26,23 @@ if ($usuario == $resultado[0]["Username"] || $contraseña == $login[0]["contrase
     $_SESSION["favorito"] = $resultado[0]["EFavorito"];
 
 
-    header("Location: index.php");
-} else {
 
-    echo "El usuario o la contraseña son incorrectos";
+        header("Location: index.php");
+    } else {
+
+        echo "El usuario o la contraseña son incorrectos";
+    }
+}else {
+    if ($usuario == $resultado[0]["Username"] || $contraseña == $login[0]["contraseña"]) {
+
+        $_SESSION["usuario"] = $usuario;
+        $_SESSION["contraseña"] = $contraseña;
+    
+    
+    
+            header("Location: admin/index.php");
+        } else {
+    
+            echo "El usuario o la contraseña son incorrectos";
+        }
 }
