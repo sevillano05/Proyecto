@@ -9,7 +9,7 @@ if ($_SESSION) { ?>
             <li><a class="background" href="http://localhost/Proyecto/index.php?page=Grupos">Equipos</a></li>
             <li><a class="background" href="http://localhost/Proyecto/index.php?page=Favorito">Equipo Favoritos</a></li>
             <li><a class="background" href="">Resultados</a></li>
-            <li><a class="background" href="">Tabla de Clasificación</a></li>
+            <li><a class="background" href="http://localhost/Proyecto/index.php?page=Clasificacion">Tabla de Clasificación</a></li>
             <li><a class="background" href="TablaPosicion.php">Tabla de Posición</a></li>
         </ul>
         

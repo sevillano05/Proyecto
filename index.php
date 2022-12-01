@@ -27,7 +27,8 @@ $idEquipo = $_GET['idEquipo']
     <link rel="stylesheet" href="css/Home.css">
     <?php if ($page == 'Grupos') {?><link rel="stylesheet" href="css/Grupos.css"> <?php }
     if ($page == 'Jugadores') {?><link rel="stylesheet" href="css/Jugadores.css"> <?php }
-    if ($page == 'Favorito') {?><link rel="stylesheet" href="css/Favorito.css"> <?php } ?>
+    if ($page == 'Favorito') {?><link rel="stylesheet" href="css/Favorito.css"> <?php }
+    if ($page == 'Clasificacion') {?><link rel="stylesheet" href="css/Clasificacion.css"> <?php } ?>
 </head>
 <body>
     
