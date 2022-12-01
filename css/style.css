@@ -108,6 +108,11 @@ body{
     width: 15%;
 }
 
+.header a{
+    text-decoration: none;
+    font-size: large;
+}
+
 /* Equipos Section */
 .cuerpo{
     height: 70%;

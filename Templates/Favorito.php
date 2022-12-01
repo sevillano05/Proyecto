@@ -1,6 +1,9 @@
     <div class="cuerpo flex">
         <?php //Querys mostrar partidos
-        $queryTecnicos = "SELECT * FROM partidos WHERE Pais1= '$_SESSION[favorito]' order by Fecha";
+        $queryTecnicos = "SELECT p.GolesP1, p.GolesP2, e.Pais, e.UrlBandera, p.Fecha, p.Estadio
+                            FROM partidos p JOIN equipos e ON p.Pais2 = e.Id 
+                            WHERE Pais1 = '$_SESSION[favorito]' OR Pais2='$_SESSION[favorito]' 
+                            ORDER BY Fecha;" ;
         $tecnicos = $conn -> query($queryTecnicos);
         $tecnicos -> fetch_all(MYSQLI_ASSOC); 
 
@@ -23,32 +26,31 @@
                         <hr>
                     <?php } ?>
                 </div>
-                <div class="cuerpo flex">
+                <div class="cuerpo">
+                    <div class="ng flex">
+                        <div class="titulo">Pais</div>
+                        <div class="titulo">Fecha</div>
+                        <div class="titulo">Pais</div>
+                        <div class="titulo">Estadio</div>    
+                    </div>
                     <?php foreach ($tecnicos as $tecnico) { ?><!-- Mostrar Tecnico -->
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Pais 1</th>
-                                <th>Goles Pais 1</th>
-                                <th>Goles Pais 2</th>
-                                <th>Pais 2</th>
-                                <th>Fecha</th>
-                                <th>Estadio</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><?php echo '<h4 class="titulo">'.$tecnico['Pais1'].'</h4>' ?></td>
-                                <td><?php echo '<h4 class="titulo">'.$tecnico['GolesP1'].'</h4>' ?></td>
-                                <td><?php echo '<h4 class="titulo">'.$tecnico['GolesP2'].'</h4>' ?></td>
-                                <td><?php echo '<h4 class="titulo">'.$tecnico['Pais2'].'</h4>' ?></td>
-                                <td><?php echo '<h4 class="titulo">'.$tecnico['Fecha'].'</h4>' ?></td>
-                                <td><?php echo '<h4 class="titulo">'.$tecnico['Estadio'].'</h4>' ?></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div class="ng flex">
+                            <div>
+                                <?php echo '<h4 class="titulo">'.$favid['Pais'].'</h4>' ?>
+                                <?php echo '<img src="'.$favid['UrlBandera'].'" alt="">' ?>
+                            </div>
+                            <div><?php echo '<h4 class="titulo">'.$tecnico['Fecha'].'</h4>' ?></div>
+                            <div>
+                                <?php echo '<h4 class="titulo">'.$tecnico['Pais'].'</h4>' ?>
+                                <?php echo '<img src="'.$tecnico['UrlBandera'].'" alt="">' ?>
+                            </div>
+                            
+                            <div>
+                                <?php echo '<h4 class="titulo">'.$tecnico['Estadio'].'</h4>' ?>
+                                
+                            </div>
+                        </div>
                     <?php } ?>
-                    
                 </div>  
             <?php }else{
                 echo '<section class="marco">

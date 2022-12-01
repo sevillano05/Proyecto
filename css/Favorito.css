@@ -26,10 +26,28 @@
 .header .flex{
     justify-content: space-around;
 }
+.cuerpo .cuerpo{
+    width: 90%;
+    text-align: -webkit-center;
+}
 .cuerpo hr{
     width: -webkit-fill-available;
 }
-.cuerpo .cuerpo .titulo{
-    margin-left: 2%;
-    margin-right: 2%;
+
+
+.ng{
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}
+
+.ng div{
+    width: 25%;
+}
+
+.ng div img{
+    width: 30%;
 }

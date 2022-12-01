@@ -7,7 +7,9 @@ $id ->fetch_all(MYSQLI_ASSOC);
 if ($page == "Jugadores") { ?>
     <div class="header">
         <?php foreach ($id as $id) { 
-            echo '<a href="http://localhost/Proyecto/CambioFav.php?idEquipo='.$idEquipo.'"  target="">Seleccionar Favorito</a><br>' ?>
+            echo '<button>
+                <a href="http://localhost/Proyecto/CambioFav.php?idEquipo='.$idEquipo.'"  target="">Seleccionar Favorito</a>
+            </button><br>' ?>
             <?php echo '<img src="'.$id['UrlBandera'].'" alt="">' ?>
             <?php echo '<h1 class="titulo">'.$id['Pais'].'</h1>' ?>
             <section class="flex">
