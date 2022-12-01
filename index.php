@@ -1,3 +1,8 @@
+<!-- Integrantes
+Antonio Sevillano 
+Yitxiel Yatheman
+Carlos Zengh
+-->
 <?php session_start();
 $servername = "localhost";
 $username = "root";
