@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,6 +13,7 @@ if (isset($_GET['page'])) {
 } else {
     $page = "Home";
 }
+$idEquipo = $_GET['idEquipo']
 ?>
 
 <!DOCTYPE html>
@@ -23,12 +24,13 @@ if (isset($_GET['page'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundial Qatar 2022</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/css/Home.css">
-    <?php if ($page == 'Grupos') {?><link rel="stylesheet" href="css/Grupos.css"> <?php } ?>
-    <?php if ($page == 'Jugadores') {?><link rel="stylesheet" href="css/Jugadores.css"> <?php } ?>
+    <link rel="stylesheet" href="css/Home.css">
+    <?php if ($page == 'Grupos') {?><link rel="stylesheet" href="css/Grupos.css"> <?php }
+    if ($page == 'Jugadores') {?><link rel="stylesheet" href="css/Jugadores.css"> <?php }
+    if ($page == 'Favorito') {?><link rel="stylesheet" href="css/Favorito.css"> <?php } ?>
 </head>
 <body>
-    <?php include("Templates/nav_bar.php") ?>
+    
     <?php //Mensaje de error
     if ($conn->connect_error) {
         echo '<section class="error">
@@ -48,7 +50,10 @@ if (isset($_GET['page'])) {
              </section>';
     
         die();
+    }elseif ($page == 'Home'){
+        include('Templates/'.$page.'.php');
     }else{
+        include("Templates/nav_bar.php");
         include('Templates/'.$page.'.php');
     }
 $conn->close();

@@ -20,6 +20,9 @@
     justify-content: space-around;
     align-items: center;
 }
+.header{
+    width: 100%;
+}
 .header .flex{
     justify-content: space-around;
 }

@@ -9,32 +9,38 @@ Paleta de colores
     height: 10%;
 }
 .menu {
-        display: flex;
-        text-align: center;
-        padding: 0;
-        margin-right: 6vw;
-} 
+    display: flex;
+    text-align: center;
+    padding: 0;
+    margin-right: 6vw;
+}
 .menu li {
-        list-style: none;
-        margin-top: 8px;
-        border-color: black;
+    list-style: none;
+    margin-top: 8px;
+    border-color: black;
 }
 .menu li a {
-        text-decoration: none;
-        color: white;
-        font-weight: 550;
-        padding: 20px 20px ;
+    text-decoration: none;
+    color: white;
+    font-weight: 550;
+    padding: 20px 15px ;
+    transition: 0.5s;
+    margin: 0 4px;
 }
-.menucontainer .logo {
-        width: 5vw;
-        height: 10vh;
-        margin-left: 15px;
-        margin-top: 8px;
+.menu li a:hover {
+    background-color: rgba(67, 64, 64, 0.534); 
+    border-radius: 10px;
+}
+.logo {
+    width: 5vw;
+    height: 10vh;
+    margin-left: 15px;
+    margin-top: 8px;
 }
 .sesiones {
-        margin-top: 25px;
-        margin-bottom: 27px;
-        margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 27px;
+    margin-right: 20px;
 }
 strong {
     margin-right: 11px;
@@ -44,12 +50,15 @@ strong {
     color: white;
     padding: 10px;
 }
+.sesiones strong .lr {
+    text-decoration: none;
+    color: white;
+}
+
 
 
 /* overall */
 *{
-    background-image: url(https://wallpaperaccess.com/full/983279.jpg);
-    background-color: #253655;
     color: white;
     background-attachment: fixed;
 }
@@ -65,15 +74,18 @@ body{
 }
 .flex{
     display: flex;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
 }
 .titulo{
     font-family: Arial, Helvetica, sans-serif;
     word-wrap: break-word;
     background: none;
     text-decoration: none;
+    margin-bottom: auto;
+    padding-bottom: 2%;
 }
 /* Error */
 .error{
@@ -95,6 +107,7 @@ body{
 .header img{
     width: 15%;
 }
+
 /* Equipos Section */
 .cuerpo{
     height: 70%;
