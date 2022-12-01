@@ -26,7 +26,6 @@ if ($_SESSION) { ?>
         <ul class="menu">
             <li><a class="background" href="http://localhost/Proyecto/index.php">Inicio</a></li>
             <li><a class="background" href="http://localhost/Proyecto/index.php?page=Grupos">Equipos</a></li>
-            <li><a class="background" href="http://localhost/Proyecto/index.php?page=Favorito">Equipo Favoritos</a></li>
             <li><a class="background" href="resultado2.php">Resultados</a></li>
             <li><a class="background" href="http://localhost/Proyecto/index.php?page=Clasificacion">Tabla de Clasificación</a></li>
             <li><a class="background" href="Tablaposicion2.php">Tabla de Posición</a></li>
