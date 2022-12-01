@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-12-2022 a las 10:07:16
+-- Tiempo de generación: 01-12-2022 a las 18:59:49
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -126,6 +126,7 @@ CREATE TABLE `partidos` (
   `GolesP2` int(11) NOT NULL DEFAULT 0,
   `Fecha` datetime NOT NULL,
   `Estadio` varchar(50) NOT NULL,
+  `Clasficacion` varchar(50) NOT NULL,
   `on_creation` timestamp NOT NULL DEFAULT current_timestamp(),
   `on_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -134,13 +135,13 @@ CREATE TABLE `partidos` (
 -- Volcado de datos para la tabla `partidos`
 --
 
-INSERT INTO `partidos` (`Id`, `Pais1`, `GolesP1`, `Pais2`, `GolesP2`, `Fecha`, `Estadio`, `on_creation`, `on_update`) VALUES
-(2, 1, 0, 3, 0, '2022-12-01 00:00:00', 'Maracana', '2022-12-01 06:25:11', '2022-12-01 06:25:11'),
-(3, 6, 0, 7, 0, '2022-12-01 00:00:00', 'Maracana', '2022-12-01 06:25:11', '2022-12-01 06:25:11'),
-(4, 1, 0, 2, 0, '2022-12-01 00:00:00', 'Maracana', '2022-12-01 06:25:11', '2022-12-01 06:25:11'),
-(5, 30, 0, 32, 0, '2022-12-01 00:00:00', 'Maracana', '2022-12-01 06:25:11', '2022-12-01 06:25:11'),
-(6, 18, 0, 19, 0, '2022-12-06 00:00:00', 'Maracana', '2022-12-01 06:25:11', '2022-12-01 07:04:44'),
-(7, 18, 1, 17, 2, '2022-12-01 00:00:00', 'Maracana', '2022-12-01 06:25:11', '2022-12-01 07:04:44');
+INSERT INTO `partidos` (`Id`, `Pais1`, `GolesP1`, `Pais2`, `GolesP2`, `Fecha`, `Estadio`, `Clasficacion`, `on_creation`, `on_update`) VALUES
+(2, 1, 0, 3, 0, '2022-12-01 00:00:00', 'Maracana', 'Octavos', '2022-12-01 06:25:11', '2022-12-01 15:36:17'),
+(3, 6, 0, 7, 0, '2022-12-01 00:00:00', 'Maracana', 'Octavos', '2022-12-01 06:25:11', '2022-12-01 15:36:17'),
+(4, 7, 0, 2, 0, '2022-12-22 10:00:00', 'Maracana', 'Octavos', '2022-12-01 06:25:11', '2022-12-01 17:01:00'),
+(5, 30, 0, 32, 0, '2022-12-01 00:00:00', 'Maracana', 'Cuartos', '2022-12-01 06:25:11', '2022-12-01 15:36:17'),
+(6, 18, 0, 19, 0, '2022-12-06 00:00:00', 'Maracana', '', '2022-12-01 06:25:11', '2022-12-01 07:04:44'),
+(7, 18, 1, 17, 2, '2022-12-01 00:00:00', 'Maracana', '', '2022-12-01 06:25:11', '2022-12-01 07:04:44');
 
 -- --------------------------------------------------------
 
@@ -187,7 +188,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`Id`, `Username`, `Email`, `Contraseña`, `EFavorito`, `On_Creation`, `On_Update`) VALUES
-(6, 'qweq', 'sada@asd.com', '123', 9, '2022-12-01 01:49:52', '2022-12-01 09:04:17');
+(6, 'qweq', 'sada@asd.com', '123', 18, '2022-12-01 01:49:52', '2022-12-01 17:35:44'),
+(7, 'Juan', 'sada@asd.com', '789', 18, '2022-12-01 17:41:57', '2022-12-01 17:57:01'),
+(8, 'xxxxx', 'sada@asd.com', '789', 11, '2022-12-01 17:43:32', '2022-12-01 17:50:32');
 
 --
 -- Índices para tablas volcadas
@@ -259,7 +262,7 @@ ALTER TABLE `tecnicos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas
